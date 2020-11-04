@@ -1,15 +1,22 @@
-import java.util.*;
-
-class Main {
+import java.util.Scanner;
+ 
+public class AcmHotel {
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
-    int t = s.nextInt();
-
-    for(int i = 0; i < t; i++){
-      int h = s.nextInt();
-      int w = s.nextInt();
-      int n = s.nextInt();
-      System.out.println(h + " " + w + " " + n);
-    }
+      // TODO Auto-generated method stub
+      Scanner sc = new Scanner(System.in);
+      int T = sc.nextInt();
+      
+      for(int i  = 0; i< T; i++) {
+          int H = sc.nextInt();
+          int W = sc.nextInt();
+          int N = sc.nextInt();
+          int x = (N/H) + 1;
+          int y = N%H;
+          if(N%H==0) {
+              x = N/H;
+              y = H;
+          }
+          System.out.println(y*100+x);
+      }
   }
 }
