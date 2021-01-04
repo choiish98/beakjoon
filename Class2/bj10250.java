@@ -5,10 +5,10 @@ public class bj10250 {
       // TODO Auto-generated method stub
       Scanner sc = new Scanner(System.in);
       int T = sc.nextInt();
+      sc.close();
       
       for(int i  = 0; i< T; i++) {
           int H = sc.nextInt();
-          int W = sc.nextInt();
           int N = sc.nextInt();
           int x = (N/H) + 1;
           int y = N%H;

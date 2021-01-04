@@ -1,4 +1,3 @@
-package Class2;
 import java.util.*;
 public class bj1018 {
 	

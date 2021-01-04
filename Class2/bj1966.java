@@ -1,4 +1,3 @@
-package Class2;
 import java.util.*;
 public class bj1966 {
 	public static void main(String[] args) {
@@ -17,6 +16,7 @@ public class bj1966 {
 				queue[j] = j+1;
 				imp[j] = s.nextInt();
 			}
+			s.close();
 			
 			sortQueue(queue, imp, m);// 큐를 순서대로 배열 하는 함수
 			

@@ -1,4 +1,3 @@
-package Class2;
 import java.util.*;
 
 public class bj1920 {
@@ -13,6 +12,7 @@ public class bj1920 {
 		int m = s.nextInt();	
 		for(int i =0 ; i < m; i++) 
 			System.out.println(new bj1920().solution(arr_n, s.nextInt()));
+		s.close();
 	}
 
 	private int solution(int[] arr_n, int num) {

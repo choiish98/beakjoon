@@ -1,4 +1,3 @@
-package Class2;
 import java.util.*;
 public class bj1259 {
 
@@ -7,6 +6,7 @@ public class bj1259 {
 		
 		for(;;) {
 			int a = s.nextInt(); int b = 0;	int temp = a;
+			s.close();
 			if(a == 0) break;
 			while(temp != 0) {
 		            b = b * 10 + temp % 10;
