@@ -25,10 +25,16 @@ public class MatrixTest {
   class MyMatrix {
     /* static 메소드 multiply를 작성하시오. */
     public static int[][] multiply(int[][] x, int[][] y) {
-      int[][] b = { { 1, 1 }, 
-                    { 2, 2 }, 
-                    { 3, 3 } };
-      return b;
+      int i = x.length; int j = y[0].length;
+      int[][] mul = new int[i][j];
+
+      for(int k = 0; k < i; k++){
+        for(int l = 0; l < j; l++){
+          mul[k][l] = x[k][0] * y[0][l] + x[k][1] * y[1][l] + x[k][2] * y[2][l];
+        }
+      }
+
+      return mul;
     }
     public static void print(int[][] matrix) {
       int iMax = matrix.length;
