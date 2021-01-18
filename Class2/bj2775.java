@@ -1,33 +1,24 @@
 import java.util.Scanner;
-public class bj2775 {
+
+class bj2775 {
 	public static void main(String[] args) {
-		
-		Scanner in = new Scanner(System.in);
-		
-		// 아파트 생성 
-		int[][] APT = new int[15][15];
- 
-		for(int i = 0; i < 15; i++) {
-			APT[i][1] = 1;	// i층 1호
-			APT[0][i] = i;	// 0층 i호
-		}
- 
- 
-		for(int i = 1; i < 15; i ++) {	// 1층부터 14층까지
- 
-			for(int j = 2; j < 15; j++) {	// 2호부터 14호까지
-				APT[i][j] = APT[i][j - 1] + APT[i - 1][j];
-			}
-		}
-		
-		// 테스트 부분 		
-		int T = in.nextInt();
-		
-		for(int i = 0; i < T; i++) {
-			int n = in.nextInt();
-			int k = in.nextInt();
-			System.out.println(APT[n][k]);
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		for (int i = 0; i < t; i++) {
+			int k = s.nextInt();
+			int n = s.nextInt();
+
+			int result = re(k, n);
+			System.out.println(result);
 		}
 	}
- 
+
+	public static int re(int k, int n) {
+		if (k == 0)
+			return n;
+		if (n == 1)
+			return 1;
+		else
+			return re(k - 1, n) + re(k, n - 1);
+	}
 }
