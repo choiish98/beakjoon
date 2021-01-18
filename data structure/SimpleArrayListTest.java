@@ -30,7 +30,10 @@ class SimpleArrayList {
     }
 
     public void remove(int index) {
-        /* 해당 메소드를 구현하시오. */
+        for (int i = index; i <= size; i++) {
+            this.elements[i] = this.elements[i + 1];
+        }
+        size--;
     }
 
     public String toString() {
