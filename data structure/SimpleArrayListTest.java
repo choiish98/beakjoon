@@ -2,10 +2,8 @@ public class SimpleArrayListTest {
     public static void main(String[] args) {
         SimpleArrayList list = new SimpleArrayList();
         System.out.println(list);
-        list.add(11);
-        list.add(22);
-        list.add(33);
-        list.add(44);
+        list.remove(4);
+        list.remove(2);
         System.out.println(list);
     }
 }
@@ -16,12 +14,23 @@ class SimpleArrayList {
 
     public SimpleArrayList() {
         this.elements = new int[10];
-        this.size = 0;
+        this.size = 8;
+        for (int i = 0; i < size; i++) {
+            elements[i] = 100 - 4 * i;
+        }
     }
 
     public void add(int data) {
         this.elements[this.size] = data;
         this.size++;
+    }
+
+    public void insert(int index, int n) {
+        this.elements[index] = n;
+    }
+
+    public void remove(int index) {
+        /* 해당 메소드를 구현하시오. */
     }
 
     public String toString() {
