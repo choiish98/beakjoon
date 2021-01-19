@@ -1,25 +1,19 @@
-import java.util.Scanner;
-
-public class bj2869 {
-
-    public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-
-        int up = in.nextInt(); // A
-        int down = in.nextInt(); // B
-        int length = in.nextInt(); // C
-
-        int day = (length - down) / (up - down);
-
-        // 나머지가 있을 경우 (잔여 블럭이 있을 경우)
-        if ((length - down) % (up - down) != 0) {
-            day++;
-        }
-        System.out.println(day);
-    }
-}
+import java.io.*;
+import java.util.*;
 
 class bj2869 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int v = Integer.parseInt(st.nextToken());
+        int day = (v - b) / (a - b);
 
+        if ((v - b) % (a - b) > 0) {
+            day++;
+        }
+
+        System.out.println(day);
+    }
 }
