@@ -1,19 +1,19 @@
-
 import java.util.Scanner;
 
-public class bj11050 {
-    public static void main(String[] args) {
+class bj11050 {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        System.out.println(fac(a) / (fac(a - b) * fac(b)));
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        System.out.println(fac(n) / (fac(k) * fac(n - k)));
     }
 
     public static int fac(int n) {
-        int i = 1;
-        for (int j = 1; j <= n; j++) {
-            i *= j;
+        int sum = 1;
+        for (int i = 1; i <= n; i++) {
+            sum *= i;
         }
-        return i;
+        return sum;
     }
 }
