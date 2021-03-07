@@ -10,7 +10,7 @@ public class bj2108 {
 		int[] arr = new int[8001];
 
 		/*
-		 * sum = 총 합계 max = 최댓값 min = 최솟값 median = 중 mode = 최빈값
+		 * sum = 총 합계 max = 최댓값 min = 최솟값 median = 중앙값 mode = 최빈값
 		 */
 		int sum = 0;
 		int max = Integer.MIN_VALUE;
