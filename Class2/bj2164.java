@@ -14,7 +14,7 @@ public class bj2164 {
 
 		while (queue.size() > 1) {
 			queue.poll();
-			queue.offer(queue.poll());
+			queue.offer(queue.poll());;
 		}
 
 		System.out.println(queue.peek());
