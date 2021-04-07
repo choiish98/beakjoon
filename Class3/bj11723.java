@@ -43,6 +43,8 @@ public class bj11723 {
             case "empty":
                 bitset &= 0;
                 break;
+            default:
+                break;
             }
         }
         bw.write(sb.toString());
