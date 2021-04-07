@@ -10,12 +10,12 @@
     O(n): O(n log n)
 */
 public class mergeSort {
-    private static void mergeSort(int[] arr) {
+    private static void mergeSort1(int[] arr) {
         int[] tmp = new int[arr.length];
-        mergeSort(arr, tmp, 0, arr.length - 1)
+        mergeSort(arr, tmp, 0, arr.length - 1);
     }
 
-    private static void mergeSort(int[] arr, int tmp[], int start, int end) {
+    private static void mergeSort1(int[] arr, int tmp[], int start, int end) {
         if (start < end) {
             int mid = (start + end) / 2;
             mergeSort(arr, tmp, start, mid);
@@ -56,7 +56,7 @@ public class mergeSort {
     public static void main(String[] args) {
         int[] arr = { 3, 9, 4, 7, 5, 0, 1, 6, 8, 2 };
         PrintArray(arr);
-        mergeSort(arr);
+        mergeSort1(arr);
         PrintArray(arr);
     }
 }
