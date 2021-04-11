@@ -20,7 +20,7 @@ public class bj1764 {
                 al.add(s);
         }
 
-        al.sort();
+        // al.sort();
         System.out.println(al.size());
         for (int i = 0; i < al.size(); i++) {
             System.out.println(al.get(i));
