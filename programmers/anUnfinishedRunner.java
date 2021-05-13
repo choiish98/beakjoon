@@ -3,8 +3,8 @@ import java.util.*;
 
 public class anUnfinishedRunner {
     public static void main(String[] args) throws IOException {
-        String[] participant = {};
-        String[] completion = {};
+        String[] participant = { "asdf", "asdf" };
+        String[] completion = { "asdf", "asdf" };
 
         Solution solution = new Solution(participant, completion);
 
