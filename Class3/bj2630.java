@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj2630 {
+public class Main {
     static int[] cnt = new int[2];
     static int[][] paper;
 
