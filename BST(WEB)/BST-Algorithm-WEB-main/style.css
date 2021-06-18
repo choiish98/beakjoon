@@ -1,0 +1,52 @@
+body {
+    width: 100dp;
+    height: 100dp;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tree {
+    margin-top: 40px;
+}
+
+.level {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.node {    
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 17pt;
+}
+
+.node span {
+    font-size: 20pt;
+    color: white;
+}
+
+
+.level:nth-child(3) {
+    margin-top: 10px;
+}
+
+.level:nth-child(4) {
+    margin-top: 40px;
+}
+
+.level:last-child {
+    margin-top: 60px;
+}
