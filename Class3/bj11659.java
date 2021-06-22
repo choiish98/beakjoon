@@ -1,10 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-/**
- * @author HEESOO
- *
- */
 class bj11659 {
     static int[] array;
 
