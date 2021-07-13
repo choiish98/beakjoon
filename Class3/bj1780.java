@@ -2,29 +2,50 @@ import java.io.*;
 import java.util.*;
 
 public class bj1780 {
-  static int[] cnt = new int[3];
+  static int first = 0;
+  static int second = 0;
+  static int third = 0;
   static int[][] paper;
 
-  static void divide(int n, int x, int y) {
-    for (int i = y; i < y + n; i++) {
-      for (int j = x; j < x + n; j++) {
-        if (paper[i][j] != paper[y][x]) {
-          divide(n / 3, y, x);
-          divide(n / 3, y + n / 3, x);
-          divide(n / 3, y, x + n / 3);
-          divide(n / 3, y + n / 3, x + n / 3);
+  static boolean check(int n, int x, int y) {
+    int color = paper[x][y];
 
-          return;
-        }
+    for(int i = x; i < x + n; i++) {
+      for(int j = y; j < y + n; j++) {
+        if(color != paper[i][j]) return false;
       }
     }
 
-    cnt[paper[y][x]]++;
+    return true;
+  }
+
+  static void partition(int n, int x, int y) {
+    if(check(n, x, y)) {
+      if(paper[x][y] == -1) first++;
+      else if(paper[x][y] == 0) second++;
+      else third++;
+
+      return;
+    }
+
+    int dSize = n / 3;
+    partition(dSize, x, y);
+    partition(dSize, x + dSize, y);
+    partition(dSize, x + 2 * dSize, y);
+
+    partition(dSize, x, y + dSize);
+    partition(dSize, x, y + 2 * dSize);
+    partition(dSize, x + dSize, y + dSize);
+    
+    partition(dSize, x + 2 * dSize, y + dSize);
+    partition(dSize, x + dSize, y + 2 * dSize);
+    partition(dSize, x + 2 * dSize, y + 2 * dSize);
+
+    return;
   }
 
   public static void main(String[] args) throws IOException {
-    BufferedReader br = new BufferedReader(new Inp
-    tStreamReader(System.in));
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
     int N = Integer.parseInt(br.readLine());
     paper = new int[N][N];
@@ -35,7 +56,9 @@ public class bj1780 {
       }
     }
 
-    divide(N, 0, 0);
-    for(int n : cnt) System.out.println(n);
+    partition(N, 0, 0);
+    System.out.println(first);
+    System.out.println(second);
+    System.out.println(third);
   }
 }
